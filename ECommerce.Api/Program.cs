@@ -1,5 +1,6 @@
 using System.Text;
 using ECommerce.Api.Data;
+using ECommerce.Api.Repositories;
 using ECommerce.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +34,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ProductRepository>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
