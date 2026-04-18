@@ -37,6 +37,8 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductRepository>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddScoped<PaymentService>();
+builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<NotificationService>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
