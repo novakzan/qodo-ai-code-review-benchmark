@@ -1,5 +1,6 @@
 using System.Text;
 using ECommerce.Api.Data;
+using ECommerce.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -29,6 +30,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
     });
+
+builder.Services.AddScoped<AuthService>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
