@@ -35,6 +35,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<OrderService>();
 
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
